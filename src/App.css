@@ -1,23 +1,18 @@
 .container{
-  /* border: solid; */
   background-color:rgba(255, 255, 255, .99);
   min-height: 940px;
-  /* margin: 0px !important;*/
   padding: 0px !important;
-  /*width: 2000px !important; */
 }
 .App{
-  /* border: solid green; */
   background-image: url('./img/container-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
 }
 form{
   width: 100%;
-  /* border: solid; */
   display: flex;
-  /* justify-content: center; */
   align-content: center;
 }
 ul{
@@ -25,10 +20,6 @@ ul{
   margin: 0px !important;
   list-style-type: none;
   padding-inline-start: 0px;
-  /* margin-bottom: 0px !important; */
-}
-form ul,form input, form button{
-  /* border: solid yellow !important */
 }
 form input{
   margin-right: 0px !important;
@@ -51,7 +42,6 @@ form button{
 }
 ul li{
   display: inline;
-  /* margin-right: 10px; */
   padding: 0px;
 }
 .search-box{
@@ -63,23 +53,14 @@ ul li{
   flex-direction: column;
   align-items: center;
   margin: 0px 7px;
-  /* border: solid; */
 }
 .min-rating{
   margin-bottom: 0px ;
-  /* border: solid green; */
-}
-.search-star{
-  /* border: solid yellow; */
 }
 form button{
-  /* border: 1px solid gray !important; */
   padding: 4px !important;
-  /* margin: 2px !important */
 }
-form button:hover{
-  /* background-color:rgba(255, 255, 255, 1) !important; */
-}
+
 .add-movie-card{
   box-sizing: border-box;
   display: flex;
@@ -116,11 +97,8 @@ form button:hover{
   margin: 1%;
 }
 .movie-poster{
-  /* position:absolute; */
   width: 100%;
   height: 90%;
-  /* max-height: 83%;
-  min-height: 63%; */
 }
 .movie-rating{
   position: absolute;
@@ -130,7 +108,6 @@ form button:hover{
   padding: 2%;
   background-color: white;
   border: solid white;
-  /* height: auto; */
 }
 .movie-title-release{
   margin: 0px;
@@ -138,4 +115,38 @@ form button:hover{
 .movies{
   display: flex;
   flex-wrap: wrap;
+}
+
+/***** Modal ******/
+.modal-container{
+  border: 2px solid gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 65px 42px rgba(0,0,0,0.75);
+  position: fixed;
+  background-color:white;
+  width: 50%;
+  padding: 0%;
+  left: 25%;
+  top: 25%;
+  z-index: 1;
+
+}
+.form-modal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-modal input, .form-modal div,.form-modal button{
+  padding: 2%;
+  width: 100%;
+}
+.modal-rating-options{
+  border: 1px solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btn-confirm{
+  width: 25% !important;
+  margin: 2%
 }

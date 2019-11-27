@@ -11,7 +11,6 @@ export default class searchBar extends Component {
     }
     handleStarClick=(starId)=>{
         let tmpSearchStars = this.state.searchStars
-        // console.log(tmpSearchStars)
         // disabling the stars behind the clicked star
         if(tmpSearchStars[starId]===true){
             for(let i=starId+1;i<=4;i++){
@@ -38,14 +37,12 @@ export default class searchBar extends Component {
     }
     
     render(){
-        // console.log(this.state.searchInput)
     return (
         <div>
             <nav className="navbar navbar-light bg-light">
                 <form className="form-inline">
                     <input type="text" className="search-box" placeholder="search for movies..." onChange={this.handleMovieTitleChange}/>
-                    <button className="btn-primary btn-search" type="submit" onSubmit={()=>this.props.handleSearch(this.state.searchInput,this.state.searchStars)}>Search</button>
-                    <button className="btn-secondary btn-reset" type="reset">Reset</button>
+                    <button className="btn-primary btn-search" type="button" onClick={()=>this.props.handleSearch(this.state.searchInput,this.state.searchStars)}>Search</button>
                     <div className="rating">
                         <p className="min-rating">Minimum rating</p>
                         <ul className="search-star">
